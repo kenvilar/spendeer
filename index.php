@@ -10,6 +10,7 @@
 </head>
 <body>
 
+<button class="add_button">Add</button>
 
 <script src="main.js"></script>
 </body>
