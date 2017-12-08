@@ -16,7 +16,7 @@ var viewController = (function () {
 
 	return {
 		getInputPublic: function () {
-			getInput();
+			return getInput();
 		}
 	};
 
@@ -26,11 +26,11 @@ var appController = (function (budgetCtrl, viewCtrl) {
 
 	var kv_add_item = function () {
 		// Get the input data
+		var user_input = viewCtrl.getInputPublic();
 		// Add data to budgetController
 		// Add data to viewController
 		// Calculate
 		// Display the result to the view
-		console.log('Item was added successfully!');
 	};
 
 	document.querySelector('.add_button').addEventListener('click', kv_add_item);
