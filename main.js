@@ -12,20 +12,20 @@ var viewController = (function () {
 
 var appController = (function (budgetCtrl, viewCtrl) {
 
-	document.querySelector('.add_button').addEventListener('click', function () {
+	var kv_add_item = function () {
 		// Get the input data
 		// Add data to budgetController
 		// Add data to viewController
 		// Calculate
 		// Display the result to the view
-		console.log('Button was clicked!');
-	});
+		console.log('Item was added successfully!');
+	};
+
+	document.querySelector('.add_button').addEventListener('click', kv_add_item);
 
 	document.addEventListener('keypress', function (e) {
 		if (e.keyCode === 13 || e.which === 13) {
-			console.log('You hit Enter key!');
-		} else {
-			console.log('Please hit Enter key!');
+			kv_add_item();
 		}
 	});
 
