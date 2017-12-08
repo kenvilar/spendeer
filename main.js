@@ -6,7 +6,17 @@ var budgetController = (function () {
 
 var viewController = (function () {
 
-	// TODO
+	var getInput = function () {
+		var item_type = document.querySelector('.item_type').value;
+		var item_description = document.querySelector('.item_description').value;
+		var item_value = document.querySelector('.item_value').value;
+	};
+
+	return {
+		getInputPublic: function () {
+			getInput();
+		}
+	};
 
 })();
 
