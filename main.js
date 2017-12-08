@@ -22,7 +22,7 @@ var appController = (function (budgetCtrl, viewCtrl) {
 	});
 
 	document.addEventListener('keypress', function (e) {
-		if (e.keyCode === 13) {
+		if (e.keyCode === 13 || e.which === 13) {
 			console.log('You hit Enter key!');
 		} else {
 			console.log('Please hit Enter key!');
