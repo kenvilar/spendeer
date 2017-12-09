@@ -34,24 +34,34 @@ var viewController = (function () {
 
 var appController = (function (budgetCtrl, viewCtrl) {
 
-	var DOMStr = viewCtrl.getDOMStringsPublic();
+	var init = function () {
+		var DOMStr = viewCtrl.getDOMStringsPublic();
+
+		document.querySelector(DOMStr.add_button).addEventListener('click', kv_add_item);
+
+		document.addEventListener('keypress', function (e) {
+			if (e.keyCode === 13 || e.which === 13) {
+				kv_add_item();
+			}
+		});
+	};
+
 
 	var kv_add_item = function () {
 		// Get the input data
 		var user_input = viewCtrl.getInputPublic();
-		console.log(user_input);
 		// Add data to budgetController
 		// Add data to viewController
 		// Calculate
 		// Display the result to the view
 	};
 
-	document.querySelector(DOMStr.add_button).addEventListener('click', kv_add_item);
-
-	document.addEventListener('keypress', function (e) {
-		if (e.keyCode === 13 || e.which === 13) {
-			kv_add_item();
+	return {
+		initPublic: function () {
+			init();
 		}
-	});
+	};
 
 })(budgetController, viewController);
+
+appController.initPublic();
