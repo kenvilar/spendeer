@@ -29,14 +29,12 @@ var budgetController = (function () {
 
 			expOrIncArray = data.storeAll[type];
 
-			id = expOrIncArray[expOrIncArray.length - 1];
+			id = expOrIncArray[expOrIncArray.length - 1].id + 1;
 
 			if (type === 'income') {
 				new_item = Income(id, description, value);
-				id++;
 			} else if (type === 'expense') {
 				new_item = Expense(id, description, value);
-				id++;
 			}
 
 			data.storeAll[type].push(new_item);
