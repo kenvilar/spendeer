@@ -29,7 +29,7 @@ var budgetController = (function () {
 
 			expOrIncArray = data.storeAll[type];
 
-			if (expOrIncArray > 0) {
+			if (expOrIncArray.length > 0) {
 				id = expOrIncArray[expOrIncArray.length - 1].id + 1;
 			} else {
 				id = 0;
