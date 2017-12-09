@@ -92,6 +92,7 @@ var appController = (function (budgetCtrl, viewCtrl) {
 		// Get the input data
 		var user_input = viewCtrl.getInputPublic();
 		// Add data to budgetController
+		var new_data = budgetCtrl.addItemPublic(user_input.item_type, user_input.item_description, user_input.item_value);
 		// Add data to viewController
 		// Calculate
 		// Display the result to the view
