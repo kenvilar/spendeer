@@ -29,7 +29,11 @@ var budgetController = (function () {
 
 			expOrIncArray = data.storeAll[type];
 
-			id = expOrIncArray[expOrIncArray.length - 1].id + 1;
+			if (expOrIncArray > 0) {
+				id = expOrIncArray[expOrIncArray.length - 1].id + 1;
+			} else {
+				id = 0;
+			}
 
 			if (type === 'income') {
 				new_item = Income(id, description, value);
@@ -91,6 +95,7 @@ var appController = (function (budgetCtrl, viewCtrl) {
 	var kv_add_item = function () {
 		// Get the input data
 		var user_input = viewCtrl.getInputPublic();
+		console.log(user_input);
 		// Add data to budgetController
 		var new_data = budgetCtrl.addItemPublic(user_input.item_type, user_input.item_description, user_input.item_value);
 		// Add data to viewController
