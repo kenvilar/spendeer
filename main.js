@@ -25,7 +25,11 @@ var budgetController = (function () {
 
 	return {
 		addItemPublic: function (type, description, value) {
-			var new_item, id = 0;
+			var new_item, id, expOrIncArray;
+
+			expOrIncArray = data.storeAll[type];
+
+			id = expOrIncArray[expOrIncArray.length - 1];
 
 			if (type === 'income') {
 				new_item = Income(id, description, value);
