@@ -36,14 +36,17 @@ var budgetController = (function () {
 			}
 
 			if (type === 'income') {
-				new_item = Income(id, description, value);
+				new_item = new Income(id, description, value);
 			} else if (type === 'expense') {
-				new_item = Expense(id, description, value);
+				new_item = new Expense(id, description, value);
 			}
 
 			data.storeAll[type].push(new_item);
 
 			return new_item;
+		},
+		displayAllData: function () {
+			console.log(data);
 		}
 	};
 
