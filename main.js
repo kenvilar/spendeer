@@ -12,10 +12,16 @@ var budgetController = (function () {
 		this.value = value;
 	};
 
-	var storeAllExpensesArr = [];
-	var storeAllIncomesArr = [];
-	var totalExpenses = 0;
-	var totalIncomes = 0;
+	var data = {
+		storeAll: {
+			expenses: [],
+			incomes: []
+		},
+		total: {
+			expenses: 0,
+			incomes: 0
+		}
+	};
 
 })();
 
