@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
     <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.min.css" rel="stylesheet" type="text/css">
     <title>Spendeer - A Very Simple Budget Application</title>
 </head>
 <body>
