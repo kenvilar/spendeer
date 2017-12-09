@@ -14,12 +14,30 @@ var budgetController = (function () {
 
 	var data = {
 		storeAll: {
-			expenses: [],
-			incomes: []
+			expense: [],
+			income: []
 		},
 		total: {
 			expenses: 0,
 			incomes: 0
+		}
+	};
+
+	return {
+		addItemPublic: function (type, description, value) {
+			var new_item, id = 0;
+
+			if (type === 'income') {
+				new_item = Income(id, description, value);
+				id++;
+			} else if (type === 'expense') {
+				new_item = Expense(id, description, value);
+				id++;
+			}
+
+			data.storeAll[type].push(new_item);
+
+			return new_item;
 		}
 	};
 
