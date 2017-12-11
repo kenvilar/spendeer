@@ -283,7 +283,7 @@ var appController = (function (budgetCtrl, viewCtrl) {
 		if (section_id) {
 			split_id = section_id.split('-');
 			budget_type = split_id[0];
-			budget_type_id = split_id[1];
+			budget_type_id = parseInt(split_id[1]);
 
 			/*
 			Pseudocode
