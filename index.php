@@ -73,29 +73,6 @@
                     <div class="income_list">
 
                         <!--List of Incomes-->
-                        <div class="item clearfix" id="income-0">
-                            <div class="display_description">Salary 1</div>
-                            <div class="right clearfix">
-                                <div class="display_value">+ 2,100.00</div>
-                                <div class="display_delete">
-                                    <button class="display_delete--btn">
-                                        <i class="ion-ios-close-outline"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item clearfix" id="income-1">
-                            <div class="display_description">Salary 2</div>
-                            <div class="right clearfix">
-                                <div class="display_value">+ 3,100.00</div>
-                                <div class="display_delete">
-                                    <button class="display_delete--btn">
-                                        <i class="ion-ios-close-outline"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
 
                     </div>
                 </div>
@@ -104,31 +81,6 @@
                     <div class="expenses_list">
 
                         <!--List of Expenses-->
-                        <div class="item clearfix" id="expense-0">
-                            <div class="display_description">Expense 1</div>
-                            <div class="right clearfix">
-                                <div class="display_value">+ 2,100.00</div>
-                                <div class="display_percentage">10%</div>
-                                <div class="display_delete">
-                                    <button class="display_delete--btn">
-                                        <i class="ion-ios-close-outline"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item clearfix" id="expense-0">
-                            <div class="display_description">Expense 2</div>
-                            <div class="right clearfix">
-                                <div class="display_value">+ 2,100.00</div>
-                                <div class="display_percentage">10%</div>
-                                <div class="display_delete">
-                                    <button class="display_delete--btn">
-                                        <i class="ion-ios-close-outline"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
 
                     </div>
                 </div>
