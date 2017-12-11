@@ -199,7 +199,10 @@ var viewController = (function () {
 			document.querySelector(DOMStr.netIncome).textContent = obj.budget;
 			document.querySelector(DOMStr.total_income).textContent = obj.total_income;
 			document.querySelector(DOMStr.total_expense).textContent = obj.total_expense;
-			document.querySelector(DOMStr.total_percentage).textContent = obj.percentage;
+
+			if (obj.percentage > 0) {
+				document.querySelector(DOMStr.total_percentage).textContent = obj.percentage + '%';
+			}
 		},
 		getDOMStringsPublic: function () {
 			return DOMStr;
