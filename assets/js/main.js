@@ -109,7 +109,7 @@ var budgetController = (function () {
 
 			indx = ids.indexOf(id);
 
-			if (indx) {
+			if (indx !== -1) {
 				data.storeAll[type].splice(indx, 1);
 			}
 		},
@@ -219,8 +219,7 @@ var viewController = (function () {
 			}
 		},
 		deleteItemView: function (dom_id) {
-			var dom_with_hash = '#' + dom_id;
-			var element = document.querySelector(dom_with_hash);
+			var element = document.getElementById(dom_id);
 			element.parentNode.removeChild(element);
 		},
 		getDOMStringsPublic: function () {
@@ -253,6 +252,7 @@ var appController = (function (budgetCtrl, viewCtrl) {
 		budgetCtrl.calculatePublic();
 
 		data = budgetCtrl.getAllPublicData();
+		console.log(data);
 		// Display the result to the view
 
 		return data;
@@ -302,6 +302,10 @@ var appController = (function (budgetCtrl, viewCtrl) {
 
 			// 2.)
 			viewCtrl.deleteItemView(section_id);
+
+			// 3.)
+			var all_data = calc();
+			viewCtrl.displayBudget(all_data);
 		}
 	};
 
