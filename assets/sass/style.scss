@@ -79,7 +79,27 @@
 			}
 		}
 	}
-	.income_title {
-		color: $color__green;
+	.list_of_incomes_and_expenses {
+		.income_title {
+			color: $color__green;
+		}
+		.item {
+			padding: 13px;
+			border-bottom: 1px solid #e7e7e7;
+			.display_description {
+				float: left;
+			}
+			.display_value {
+				color: $color__green;
+				float: left;
+				transition: transform 0.3s;
+			}
+			.display_delete {
+				float: left;
+			}
+			&:nth-child(even) {
+				background-color: #f7f7f7;
+			}
+		}
 	}
 }
