@@ -67,7 +67,7 @@ var viewController = (function () {
 		return {
 			item_type: document.querySelector(DOMStr.item_type).value,
 			item_description: document.querySelector(DOMStr.item_description).value,
-			item_value: document.querySelector(DOMStr.item_value).value
+			item_value: parseFloat(document.querySelector(DOMStr.item_value).value)
 		};
 	};
 
@@ -157,19 +157,27 @@ var appController = (function (budgetCtrl, viewCtrl) {
 		});
 	};
 
+	var calc = function () {
+		// Calculate
+		// Display the result to the view
+	};
+
 
 	var kv_add_item = function () {
 		// Get the input data
 		var user_input = viewCtrl.getInputPublic();
 		console.log(user_input);
-		// Add data to budgetController
-		var new_data = budgetCtrl.addItemPublic(user_input.item_type, user_input.item_description, user_input.item_value);
-		// Add data to viewController
-		viewCtrl.addListItem(new_data, user_input.item_type);
-		// Clear all input fields
-		viewCtrl.clearInputFields();
-		// Calculate
-		// Display the result to the view
+
+		if (!isNaN(user_input.item_value) && user_input.item_value > 0 && user_input.item_description !== '') {
+			// Add data to budgetController
+			var new_data = budgetCtrl.addItemPublic(user_input.item_type, user_input.item_description, user_input.item_value);
+			// Add data to viewController
+			viewCtrl.addListItem(new_data, user_input.item_type);
+			// Clear all input fields
+			viewCtrl.clearInputFields();
+			// Calculate, display the result to the view
+			calc();
+		}
 	};
 
 	return {
