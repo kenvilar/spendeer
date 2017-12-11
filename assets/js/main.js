@@ -124,6 +124,14 @@ var viewController = (function () {
 			// 3. )
 			document.querySelector(el).insertAdjacentHTML('beforeend', newHtmlString);
 		},
+		clearInputFields: function () {
+			// It needs to convert this list to an array
+			var allInputFields = document.querySelectorAll(DOMStr.item_description + ', ' + DOMStr.item_value);
+			var fieldsArr = Array.prototype.slice.call(allInputFields);
+			for (var i = 0; i < fieldsArr.length; i++) {
+				fieldsArr[i].value = '';
+			}
+		},
 		getDOMStringsPublic: function () {
 			return DOMStr;
 		}
@@ -154,6 +162,7 @@ var appController = (function (budgetCtrl, viewCtrl) {
 		var new_data = budgetCtrl.addItemPublic(user_input.item_type, user_input.item_description, user_input.item_value);
 		// Add data to viewController
 		viewCtrl.addListItem(new_data, user_input.item_type);
+		viewCtrl.clearInputFields();
 		// Calculate
 		// Display the result to the view
 	};
