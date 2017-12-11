@@ -14,7 +14,7 @@ var budgetController = (function () {
 
 	var data = {
 		storeAll: {
-			expense: [],
+			expense: [], //[0, 'desc1', 20], []
 			income: []
 		},
 		total: {
@@ -44,6 +44,28 @@ var budgetController = (function () {
 			data.storeAll[type].push(new_item);
 
 			return new_item;
+		},
+		calculate: function () {
+			var allExpenses, allIncomes, netWorth, percentage, sum, all_items;
+			allExpenses = data.total.expense;
+			allIncomes = data.total.incomes;
+
+			netWorth = percentage = sum = 0;
+
+			if (type === 'income') {
+				all_items = data.storeAll[type];
+
+				all_items.forEach(function (currValue, index, arr) {
+					sum = sum + currValue.value;
+				});
+			} else if (type === 'expense') {
+				all_items = data.storeAll[type];
+
+				all_items.forEach(function (currValue, index, arr) {
+					sum = sum + currValue.value;
+				});
+			}
+			data.total[type].push(sum);
 		},
 		displayAllData: function () {
 			console.log(data);
