@@ -58,7 +58,9 @@ var viewController = (function () {
 		item_type: '.item_type',
 		item_description: '.item_description',
 		item_value: '.item_value',
-		add_button: '.add_button'
+		add_button: '.add_button',
+		incomeListContainer: '.income_list',
+		expenseListContainer: '.expenses_list'
 	};
 
 	var getInput = function () {
@@ -72,6 +74,55 @@ var viewController = (function () {
 	return {
 		getInputPublic: function () {
 			return getInput();
+		},
+		addListItem: function (obj, type) {
+			/*PseudoCode*/
+			/*
+			1. Create HTML string with dummy var
+			2. Replace the dummy var with real data
+			3. Insert the created HTML into the DOM
+			*/
+			// 1. )
+			var html, newHtmlString, el;
+
+			if (type === 'income') {
+				el = DOMStr.incomeListContainer;
+
+				html = '<div class="item clearfix" id="income-%id%">\n' +
+					'                            <div class="display_description">%description%</div>\n' +
+					'                            <div class="right clearfix">\n' +
+					'                                <div class="display_value">+ %value%</div>\n' +
+					'                                <div class="display_delete">\n' +
+					'                                    <button class="display_delete--btn">\n' +
+					'                                        <i class="ion-ios-close-outline"></i>\n' +
+					'                                    </button>\n' +
+					'                                </div>\n' +
+					'                            </div>\n' +
+					'                        </div>';
+			} else if (type === 'expense') {
+				el = DOMStr.expenseListContainer;
+
+				html = '<div class="item clearfix" id="expense-%id%">\n' +
+					'                            <div class="display_description">%description%</div>\n' +
+					'                            <div class="right clearfix">\n' +
+					'                                <div class="display_value">- %value%</div>\n' +
+					'                                <div class="display_percentage">10%</div>\n' +
+					'                                <div class="display_delete">\n' +
+					'                                    <button class="display_delete--btn">\n' +
+					'                                        <i class="ion-ios-close-outline"></i>\n' +
+					'                                    </button>\n' +
+					'                                </div>\n' +
+					'                            </div>\n' +
+					'                        </div>';
+			}
+
+			// 2. )
+			newHtmlString = html.replace('%id%', obj.id);
+			newHtmlString = newHtmlString.replace('%description%', obj.description);
+			newHtmlString = newHtmlString.replace('%value%', obj.value);
+
+			// 3. )
+			document.querySelector(el).insertAdjacentHTML('afterbegin', html);
 		},
 		getDOMStringsPublic: function () {
 			return DOMStr;
