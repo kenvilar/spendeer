@@ -119,7 +119,8 @@ var viewController = (function () {
 		netIncome: '.spendeer_value',
 		total_income: '.spendeer_income--value',
 		total_expense: '.spendeer_expenses--value',
-		total_percentage: '.spendeer_expenses--percentage'
+		total_percentage: '.spendeer_expenses--percentage',
+		list_container: '.list_of_incomes_and_expenses'
 	};
 
 	var getInput = function () {
@@ -222,6 +223,10 @@ var appController = (function (budgetCtrl, viewCtrl) {
 			if (e.keyCode === 13 || e.which === 13) {
 				kv_add_item();
 			}
+		});
+
+		document.querySelector(DOMStr.list_container).addEventListener('click', function (e) {
+			console.log(e.target);
 		});
 	};
 
