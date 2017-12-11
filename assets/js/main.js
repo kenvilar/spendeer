@@ -32,7 +32,7 @@ var budgetController = (function () {
 
 		all_items = data.storeAll[type];
 
-		all_items.forEach(function (currValue, index, arr) {
+		all_items.forEach(function (currValue) {
 			sum = sum + currValue.value;
 		});
 
@@ -43,11 +43,11 @@ var budgetController = (function () {
 		}
 	};
 
-	var calculateNetWorth = function (income, expense) {
+	var calculateNetWorth = function () {
 		var net_worth;
-		net_worth = income - expense;
+		net_worth = data.total.incomes - data.total.expenses;
 
-		return net_worth;
+		data.budget = net_worth;
 	};
 
 	var calculatePercentage = function (total_expense, total_income) {
@@ -83,10 +83,10 @@ var budgetController = (function () {
 		calculatePublic: function () {
 			var total_income, total_expense;
 
-			total_income = calculateTotal('income');
-			total_expense = calculateTotal('expense');
+			calculateTotal('income');
+			calculateTotal('expense');
 
-			data.budget = calculateNetWorth(total_income, total_expense);
+			calculateNetWorth();
 
 			data.percentage = calculatePercentage(total_expense, total_income);
 		},
