@@ -21,7 +21,7 @@ var budgetController = (function () {
 			expenses: 0,
 			incomes: 0
 		},
-		budget: 0,
+		budget: 0, //or net income
 		percentage: 0
 	};
 
@@ -43,11 +43,11 @@ var budgetController = (function () {
 		}
 	};
 
-	var calculateNetWorth = function () {
-		var net_worth;
-		net_worth = data.total.incomes - data.total.expenses;
+	var calculateNetIncome = function () {
+		var net_income;
+		net_income = data.total.incomes - data.total.expenses;
 
-		data.budget = net_worth;
+		data.budget = net_income;
 	};
 
 	var calculatePercentage = function (total_expense, total_income) {
@@ -86,7 +86,7 @@ var budgetController = (function () {
 			calculateTotal('income');
 			calculateTotal('expense');
 
-			calculateNetWorth();
+			calculateNetIncome();
 
 			data.percentage = calculatePercentage(total_expense, total_income);
 		},
