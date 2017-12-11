@@ -1,5 +1,5 @@
-@import "base";
 @import "variables";
+@import "base";
 @import "components";
 * {
 	margin: 0;
@@ -75,6 +75,20 @@ body {
 		.add_container {
 			margin: 0 auto;
 			text-align: center;
+			.item_description {
+				width: 400px;
+			}
+			.add_button {
+				font-size: 35px;
+				background: none;
+				border: none;
+				color: $color__button;
+				cursor: pointer;
+				display: inline-block;
+				vertical-align: middle;
+				line-height: 1.1;
+				margin-left: 10px;
+			}
 		}
 		.item_type {
 			width: auto;

@@ -1,3 +1,17 @@
 input, select, textarea {
 	outline: 0;
+	&:focus {
+		border: 1px solid $color__green !important;
+	}
+}
+input {
+	border: 1px solid #e7e7e7;
+	background-color: #fff;
+	color: inherit;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 12px 15px;
+	margin-right: 10px;
+	border-radius: 5px;
+	transition: border 0.3s;
 }

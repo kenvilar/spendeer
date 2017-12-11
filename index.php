@@ -39,7 +39,7 @@
                 </div>
             </div>
         </div>
-    </div> <!--end .top-->
+    </div> <!--.top-->
 
     <div class="bottom">
 
@@ -77,7 +77,7 @@
             </div>
         </div>
 
-    </div> <!--end .bottom-->
+    </div> <!--.bottom-->
 
 </div>
 
