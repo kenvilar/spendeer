@@ -153,6 +153,7 @@ var appController = (function (budgetCtrl, viewCtrl) {
 		// Add data to budgetController
 		var new_data = budgetCtrl.addItemPublic(user_input.item_type, user_input.item_description, user_input.item_value);
 		// Add data to viewController
+		viewCtrl.addListItem(new_data, user_input.item_type);
 		// Calculate
 		// Display the result to the view
 	};
