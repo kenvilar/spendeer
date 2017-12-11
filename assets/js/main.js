@@ -55,7 +55,11 @@ var budgetController = (function () {
 		percentage = data.total.expenses / data.total.incomes;
 		percentage = Math.round(percentage * 100);
 
-		data.percentage = percentage;
+		if (data.total.incomes > 0) {
+			data.percentage = percentage;
+		} else {
+			data.percentage = 0;
+		}
 	};
 
 	return {
