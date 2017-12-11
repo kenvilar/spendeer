@@ -36,7 +36,11 @@ var budgetController = (function () {
 			sum = sum + currValue.value;
 		});
 
-		data.total[type] = sum;
+		if (type === 'income') {
+			data.total['incomes'] = sum;
+		} else if (type === 'expense') {
+			data.total['expenses'] = sum;
+		}
 	};
 
 	var calculateNetWorth = function (income, expense) {
