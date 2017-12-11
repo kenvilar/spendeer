@@ -104,7 +104,7 @@
                     <div class="expenses_list">
 
                         <!--List of Expenses-->
-                        <div class="item clearfix" id="income-0">
+                        <div class="item clearfix" id="expense-0">
                             <div class="display_description">Expense 1</div>
                             <div class="right clearfix">
                                 <div class="display_value">+ 2,100.00</div>
@@ -117,7 +117,7 @@
                             </div>
                         </div>
 
-                        <div class="item clearfix" id="income-0">
+                        <div class="item clearfix" id="expense-0">
                             <div class="display_description">Expense 2</div>
                             <div class="right clearfix">
                                 <div class="display_value">+ 2,100.00</div>
