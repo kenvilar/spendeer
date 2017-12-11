@@ -279,9 +279,22 @@ var appController = (function (budgetCtrl, viewCtrl) {
 		var section_id, split_id, budget_type, budget_type_id;
 
 		section_id = e.target.parentNode.parentNode.parentNode.parentNode.id;
-		split_id = section_id.split('-');
-		budget_type = split_id[0];
-		budget_type_id = split_id[1];
+
+		if (section_id) {
+			split_id = section_id.split('-');
+			budget_type = split_id[0];
+			budget_type_id = split_id[1];
+
+			/*
+			Pseudocode
+			1. Delete the item with ID in budetCtrl
+			2. Delete the item with ID in view
+			3. Update the data
+			*/
+
+			// 1.)
+			budgetCtrl.deleteItem(budget_type, budget_type_id);
+		}
 	};
 
 	return {
