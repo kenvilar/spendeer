@@ -67,16 +67,18 @@
         </div>
 
         <div class="container clearfix">
-            <div class="list_of_incomes_container">
-                <h2 class="income_title">Income</h2>
-                <div class="income_list">
-                    <!--List of Incomes-->
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 list_of_incomes_container">
+                    <h3 class="income_title">Income</h3>
+                    <div class="income_list">
+                        <!--List of Incomes-->
+                    </div>
                 </div>
-            </div>
-            <div class="list_of_expenses_container">
-                <h2 class="expenses_title">Expenses</h2>
-                <div class="expenses_list">
-                    <!--List of Expenses-->
+                <div class="col-xs-12 col-sm-6 list_of_expenses_container">
+                    <h3 class="expenses_title">Expenses</h3>
+                    <div class="expenses_list">
+                        <!--List of Expenses-->
+                    </div>
                 </div>
             </div>
         </div>

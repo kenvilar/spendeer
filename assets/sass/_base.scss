@@ -1,3 +1,16 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	color: #555;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	position: relative;
+	height: 100vh;
+	font-weight: 400;
+}
 input, select, textarea, button, div {
 	outline: 0;
 }

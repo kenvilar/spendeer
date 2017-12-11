@@ -2,19 +2,6 @@
 @import "base";
 @import "components";
 @import "buttons";
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-body {
-	color: #555;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
-	position: relative;
-	height: 100vh;
-	font-weight: 400;
-}
 .top {
 	height: 40vh;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../../assets/images/bg.jpg);
@@ -92,11 +79,7 @@ body {
 			}
 		}
 	}
-	.list_of_incomes_container, .list_of_expenses_container {
-		float: left;
-		width: 48%;
-		.income_title {
-			color: $color__green;
-		}
+	.income_title {
+		color: $color__green;
 	}
 }
