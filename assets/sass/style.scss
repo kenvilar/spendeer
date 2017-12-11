@@ -1,4 +1,5 @@
 @import "variables";
+@import "components";
 * {
 	margin: 0;
 	padding: 0;
@@ -25,22 +26,43 @@ body {
 		left: 50%;
 		transform: translate(-50%, -50%);
 		color: #fff;
-	}
-	.spendeer_title {
-		font-size: 18px;
-		text-align: center;
-		margin-bottom: 10px;
-		font-weight: 300;
-	}
-	.spendeer_value {
-		font-weight: 300;
-		font-size: 46px;
-		text-align: center;
-		margin-bottom: 25px;
-		letter-spacing: 2px;
-	}
-	.spendeer_income {
-		margin-bottom: 10px;
-		background-color: $color__green;
+		.spendeer_title {
+			font-size: 18px;
+			text-align: center;
+			margin-bottom: 10px;
+			font-weight: 300;
+		}
+		.spendeer_value {
+			font-weight: 300;
+			font-size: 46px;
+			text-align: center;
+			margin-bottom: 25px;
+			letter-spacing: 2px;
+		}
+		.spendeer_income {
+			margin-bottom: 10px;
+			background-color: $color__green;
+		}
+		.spendeer_income, .spendeer_expenses {
+			padding: 12px;
+			text-transform: uppercase;
+		}
+		.spendeer_income--text, .spendeer_expenses--text {
+			float: left;
+			font-size: 13px;
+			color: #444;
+			margin-top: 2px;
+		}
+		.spendeer_income--value, .spendeer_expenses--value {
+			letter-spacing: 1px;
+			float: left;
+		}
+		.spendeer_income--percentage, .spendeer_expenses--percentage {
+			float: left;
+			width: 34px;
+			font-size: 11px;
+			padding: 3px 0;
+			margin-left: 10px;
+		}
 	}
 }
