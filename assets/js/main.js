@@ -226,7 +226,12 @@ var appController = (function (budgetCtrl, viewCtrl) {
 		});
 
 		document.querySelector(DOMStr.list_container).addEventListener('click', function (e) {
-			console.log(e.target);
+			var section_id, split_id, budget_type, budget_type_id;
+
+			section_id = e.target.parentNode.parentNode.parentNode.parentNode.id;
+			split_id = section_id.split('-');
+			budget_type = split_id[0];
+			budget_type_id = split_id[1];
 		});
 	};
 
