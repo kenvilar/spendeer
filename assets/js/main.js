@@ -100,6 +100,19 @@ var budgetController = (function () {
 				percentage: data.percentage
 			};
 		},
+		deleteItem: function (type, id) {
+			var ids, indx;
+
+			ids = data.storeAll[type].map(function (i) {
+				return i.id;
+			});
+
+			indx = ids.indexOf(id);
+
+			if (indx) {
+				data.storeAll[type].splice(indx, 1);
+			}
+		},
 		displayAllData: function () {
 			console.log(data);
 		}
