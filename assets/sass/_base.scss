@@ -1,11 +1,10 @@
-input, select, textarea {
+input, select, textarea, button, div {
 	outline: 0;
+}
+input, select, textarea {
 	&:focus {
 		border: 1px solid $color__green !important;
 	}
-}
-button {
-	outline: 0;
 }
 input {
 	border: 1px solid #e7e7e7;
