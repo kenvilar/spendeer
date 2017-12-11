@@ -86,6 +86,14 @@ var budgetController = (function () {
 
 			data.percentage = calculatePercentage(total_expense, total_income);
 		},
+		getAllPublicData: function () {
+			return {
+				total_income: data.total.incomes,
+				total_expense: data.total.expenses,
+				budget: data.budget,
+				percentage: data.percentage
+			};
+		},
 		displayAllData: function () {
 			console.log(data);
 		}
@@ -201,6 +209,8 @@ var appController = (function (budgetCtrl, viewCtrl) {
 	var calc = function () {
 		// Calculate
 		budgetCtrl.calculatePublic();
+		var data = budgetCtrl.getAllPublicData();
+		console.log(data);
 		// Display the result to the view
 	};
 
