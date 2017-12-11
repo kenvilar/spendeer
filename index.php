@@ -76,8 +76,6 @@
 
                     </div>
                 </div>
-            </div>
-            <div class="row">
                 <div class="col-xs-12 col-sm-6 list_of_expenses_container">
                     <h3 class="expense_title">Expenses</h3>
                     <div class="expenses_list">
