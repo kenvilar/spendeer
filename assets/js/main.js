@@ -218,6 +218,11 @@ var viewController = (function () {
 				document.querySelector(DOMStr.total_percentage).textContent = obj.percentage + '%';
 			}
 		},
+		deleteItemView: function (dom_id) {
+			var dom_with_hash = '#' + dom_id;
+			var element = document.querySelector(dom_with_hash);
+			element.parentNode.removeChild(element);
+		},
 		getDOMStringsPublic: function () {
 			return DOMStr;
 		}
@@ -288,12 +293,15 @@ var appController = (function (budgetCtrl, viewCtrl) {
 			/*
 			Pseudocode
 			1. Delete the item with ID in budetCtrl
-			2. Delete the item with ID in view
+			2. Delete the item with ID in viewCtrl
 			3. Update the data
 			*/
 
 			// 1.)
 			budgetCtrl.deleteItem(budget_type, budget_type_id);
+
+			// 2.)
+			viewCtrl.deleteItemView(section_id);
 		}
 	};
 
