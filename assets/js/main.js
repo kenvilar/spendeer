@@ -115,7 +115,11 @@ var viewController = (function () {
 		item_value: '.item_value',
 		add_button: '.add_button',
 		incomeListContainer: '.income_list',
-		expenseListContainer: '.expenses_list'
+		expenseListContainer: '.expenses_list',
+		netIncome: '.spendeer_value',
+		total_income: '.spendeer_income--value',
+		total_expense: '.spendeer_expenses--value',
+		total_percentage: '.spendeer_expenses--percentage'
 	};
 
 	var getInput = function () {
@@ -191,6 +195,12 @@ var viewController = (function () {
 			});
 			fieldsArr[0].focus();
 		},
+		displayBudget: function (obj) {
+			document.querySelector(DOMStr.netIncome).textContent = obj.budget;
+			document.querySelector(DOMStr.total_income).textContent = obj.total_income;
+			document.querySelector(DOMStr.total_expense).textContent = obj.total_expense;
+			document.querySelector(DOMStr.total_percentage).textContent = obj.percentage;
+		},
 		getDOMStringsPublic: function () {
 			return DOMStr;
 		}
@@ -214,10 +224,14 @@ var appController = (function (budgetCtrl, viewCtrl) {
 
 	var calc = function () {
 		// Calculate
+		var data;
+
 		budgetCtrl.calculatePublic();
-		var data = budgetCtrl.getAllPublicData();
-		console.log(data);
+
+		data = budgetCtrl.getAllPublicData();
 		// Display the result to the view
+
+		return data;
 	};
 
 
@@ -229,12 +243,16 @@ var appController = (function (budgetCtrl, viewCtrl) {
 		if (!isNaN(user_input.item_value) && user_input.item_value > 0 && user_input.item_description !== '') {
 			// Add data to budgetController
 			var new_data = budgetCtrl.addItemPublic(user_input.item_type, user_input.item_description, user_input.item_value);
+
 			// Add data to viewController
 			viewCtrl.addListItem(new_data, user_input.item_type);
+
 			// Clear all input fields
 			viewCtrl.clearInputFields();
+
 			// Calculate, display the result to the view
-			calc();
+			var all_data = calc();
+			viewCtrl.displayBudget(all_data);
 		}
 	};
 
