@@ -134,6 +134,7 @@ var viewController = (function () {
 			fieldsArr.forEach(function (currentValue, index, array) {
 				currentValue.value = '';
 			});
+			fieldsArr[0].focus();
 		},
 		getDOMStringsPublic: function () {
 			return DOMStr;
@@ -165,6 +166,7 @@ var appController = (function (budgetCtrl, viewCtrl) {
 		var new_data = budgetCtrl.addItemPublic(user_input.item_type, user_input.item_description, user_input.item_value);
 		// Add data to viewController
 		viewCtrl.addListItem(new_data, user_input.item_type);
+		// Clear all input fields
 		viewCtrl.clearInputFields();
 		// Calculate
 		// Display the result to the view
