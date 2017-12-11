@@ -122,7 +122,7 @@ var viewController = (function () {
 			newHtmlString = newHtmlString.replace('%value%', obj.value);
 
 			// 3. )
-			document.querySelector(el).insertAdjacentHTML('afterbegin', html);
+			document.querySelector(el).insertAdjacentHTML('beforeend', newHtmlString);
 		},
 		getDOMStringsPublic: function () {
 			return DOMStr;
