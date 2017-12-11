@@ -50,12 +50,12 @@ var budgetController = (function () {
 		data.budget = net_income;
 	};
 
-	var calculatePercentage = function (total_expense, total_income) {
+	var calculatePercentage = function () {
 		var percentage;
-		percentage = total_expense / total_income;
+		percentage = data.total.expenses / data.total.incomes;
 		percentage = Math.round(percentage * 100);
 
-		return percentage;
+		data.percentage = percentage;
 	};
 
 	return {
@@ -81,14 +81,12 @@ var budgetController = (function () {
 			return new_item;
 		},
 		calculatePublic: function () {
-			var total_income, total_expense;
-
 			calculateTotal('income');
 			calculateTotal('expense');
 
 			calculateNetIncome();
 
-			data.percentage = calculatePercentage(total_expense, total_income);
+			calculatePercentage();
 		},
 		getAllPublicData: function () {
 			return {
