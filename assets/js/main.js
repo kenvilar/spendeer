@@ -128,9 +128,12 @@ var viewController = (function () {
 			// It needs to convert this list to an array
 			var allInputFields = document.querySelectorAll(DOMStr.item_description + ', ' + DOMStr.item_value);
 			var fieldsArr = Array.prototype.slice.call(allInputFields);
-			for (var i = 0; i < fieldsArr.length; i++) {
+			/*for (var i = 0; i < fieldsArr.length; i++) {
 				fieldsArr[i].value = '';
-			}
+			}*/
+			fieldsArr.forEach(function (currentValue, index, array) {
+				currentValue.value = '';
+			});
 		},
 		getDOMStringsPublic: function () {
 			return DOMStr;
