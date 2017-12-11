@@ -1,3 +1,4 @@
+@import "base";
 @import "variables";
 @import "components";
 * {
@@ -63,6 +64,28 @@ body {
 			font-size: 11px;
 			padding: 3px 0;
 			margin-left: 10px;
+		}
+	}
+}
+.bottom {
+	.add_wrapper {
+		padding: 14px;
+		border-bottom: 1px solid #e7e7e7;
+		background-color: #f7f7f7;
+		.add_container {
+			margin: 0 auto;
+			text-align: center;
+		}
+		.item_type {
+			width: auto;
+			border: 1px solid #e7e7e7;
+			height: 44px;
+			font-size: 18px;
+			color: inherit;
+			background-color: #fff;
+			margin-right: 10px;
+			font-weight: 300;
+			transition: border 0.3s;
 		}
 	}
 }
