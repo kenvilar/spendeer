@@ -72,6 +72,7 @@
                     <h3 class="income_title">Income</h3>
                     <div class="income_list">
 
+                        <!--List of Incomes-->
                         <div class="item clearfix" id="income-0">
                             <div class="display_description">Salary 1</div>
                             <div class="right clearfix">
@@ -99,9 +100,36 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 list_of_expenses_container">
-                    <h3 class="expenses_title">Expenses</h3>
+                    <h3 class="expense_title">Expenses</h3>
                     <div class="expenses_list">
+
                         <!--List of Expenses-->
+                        <div class="item clearfix" id="income-0">
+                            <div class="display_description">Expense 1</div>
+                            <div class="right clearfix">
+                                <div class="display_value">+ 2,100.00</div>
+                                <div class="display_percentage">10%</div>
+                                <div class="display_delete">
+                                    <button class="display_delete--btn">
+                                        <i class="ion-ios-close-outline"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item clearfix" id="income-0">
+                            <div class="display_description">Expense 2</div>
+                            <div class="right clearfix">
+                                <div class="display_value">+ 2,100.00</div>
+                                <div class="display_percentage">10%</div>
+                                <div class="display_delete">
+                                    <button class="display_delete--btn">
+                                        <i class="ion-ios-close-outline"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

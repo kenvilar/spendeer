@@ -1,2 +1,93 @@
-*{margin:0;padding:0;box-sizing:border-box}body{color:#555;font-family:'Open Sans', sans-serif;font-size:16px;position:relative;height:100vh;font-weight:400}input,select,textarea,button,div{outline:0}input:focus,select:focus,textarea:focus{border:1px solid #138b2e !important}input{border:1px solid #e7e7e7;background-color:#fff;color:inherit;font-family:inherit;font-size:14px;padding:12px 15px;margin-right:10px;border-radius:5px;transition:border 0.3s}.right{float:right}.clearfix::after{content:"";display:table;clear:both}.add_button{font-size:35px;background:none;border:none;color:#23809b;cursor:pointer;display:inline-block;vertical-align:middle;line-height:1.1;margin-left:10px}.add_button:active{transform:translateY(2px)}.display_delete--btn{font-size:22px;background:none;border:none;cursor:pointer;vertical-align:middle;line-height:1;display:none;color:#d33c2d}.display_delete--btn:active{transform:translateY(2px)}.top{height:40vh;background-image:linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),url(../../assets/images/bg.jpg);background-size:cover;background-position:center;position:relative}.top .spendeer{position:absolute;width:350px;top:50%;left:50%;transform:translate(-50%, -50%);color:#fff}.top .spendeer .spendeer_title{font-size:18px;text-align:center;margin-bottom:10px;font-weight:300}.top .spendeer .spendeer_value{font-weight:300;font-size:46px;text-align:center;margin-bottom:25px;letter-spacing:2px}.top .spendeer .spendeer_income{margin-bottom:10px;background-color:#138b2e}.top .spendeer .spendeer_income,.top .spendeer .spendeer_expenses{padding:12px;text-transform:uppercase}.top .spendeer .spendeer_income--text,.top .spendeer .spendeer_expenses--text{float:left;font-size:13px;color:#444;margin-top:2px}.top .spendeer .spendeer_income--value,.top .spendeer .spendeer_expenses--value{letter-spacing:1px;float:left}.top .spendeer .spendeer_income--percentage,.top .spendeer .spendeer_expenses--percentage{float:left;width:34px;font-size:11px;padding:3px 0;margin-left:10px}.bottom .add_wrapper{padding:14px;border-bottom:1px solid #e7e7e7;background-color:#f7f7f7}.bottom .add_wrapper .add_container{margin:0 auto;text-align:center}.bottom .add_wrapper .add_container .item_description{width:400px}.bottom .add_wrapper .add_container .item_type{width:auto;border:1px solid #e7e7e7;height:44px;font-size:18px;color:inherit;background-color:#fff;margin-right:10px;font-weight:300;transition:border 0.3s}.bottom .list_of_incomes_and_expenses .income_title{color:#138b2e}.bottom .list_of_incomes_and_expenses .item{padding:13px;border-bottom:1px solid #e7e7e7}.bottom .list_of_incomes_and_expenses .item .display_description{float:left}.bottom .list_of_incomes_and_expenses .item .display_value{color:#138b2e;float:left;transition:transform 0.3s}.bottom .list_of_incomes_and_expenses .item .display_delete{float:left}.bottom .list_of_incomes_and_expenses .item:nth-child(even){background-color:#f7f7f7}
-/*# sourceMappingURL=style.min.css.map */
+/*
+Error: Undefined variable: "$col".
+        on line 23 of assets/sass/_buttons.scss
+        from line 4 of assets/sass/style.scss
+
+18: 		.spendeer_title {
+19: 			font-size: 18px;
+20: 			text-align: center;
+21: 			margin-bottom: 10px;
+22: 			font-weight: 300;
+23: 		}
+24: 		.spendeer_value {
+25: 			font-weight: 300;
+26: 			font-size: 46px;
+27: 			text-align: center;
+28: 			margin-bottom: 25px;
+
+Backtrace:
+assets/sass/_buttons.scss:23
+assets/sass/style.scss:4
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `_perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block (2 levels) in visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/stack.rb:88:in `block in with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/stack.rb:88:in `with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.5.2/lib/sass/plugin/compiler.rb:320:in `block in watch'
+/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$col\".\A         on line 23 of assets/sass/_buttons.scss\A         from line 4 of assets/sass/style.scss\A \A 18: 		.spendeer_title {\A 19: 			font-size: 18px;\A 20: 			text-align: center;\A 21: 			margin-bottom: 10px;\A 22: 			font-weight: 300;\A 23: 		}\A 24: 		.spendeer_value {\A 25: 			font-weight: 300;\A 26: 			font-size: 46px;\A 27: 			text-align: center;\A 28: 			margin-bottom: 25px;"; }
