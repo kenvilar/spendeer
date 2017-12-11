@@ -39,7 +39,7 @@
 		.spendeer_income--text, .spendeer_expenses--text {
 			float: left;
 			font-size: 13px;
-			color: #444;
+			color: #fff;
 			margin-top: 2px;
 		}
 		.spendeer_income--value, .spendeer_expenses--value {
@@ -52,6 +52,9 @@
 			font-size: 11px;
 			padding: 3px 0;
 			margin-left: 10px;
+		}
+		.spendeer_expenses {
+			background-color: $color__red;
 		}
 	}
 }
