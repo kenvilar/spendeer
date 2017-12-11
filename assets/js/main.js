@@ -261,6 +261,12 @@ var appController = (function (budgetCtrl, viewCtrl) {
 
 	return {
 		initPublic: function () {
+			viewCtrl.displayBudget({
+				total_income: 0,
+				total_expense: 0,
+				budget: 0,
+				percentage: 0
+			});
 			init();
 		}
 	};
