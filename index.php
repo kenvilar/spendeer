@@ -39,26 +39,48 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> <!--end .top-->
+
+    <div class="bottom">
+
+        <div class="add_wrapper">
+            <div class="add_container">
+                <label for="item_type">
+                    <select id="item_type" name="item_type" class="item_type">
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                    </select>
+                </label>
+                <label for="item_description">
+                    <input type="text" name="" class="item_description" id="item_description"
+                           placeholder="Add Description">
+                </label>
+                <label for="item_value">
+                    <input type="number" name="item_value" id="item_value" class="item_value" placeholder="Value">
+                </label>
+                <button class="add_button"><i class="ion-ios-checkmark-outline"></i></button>
+            </div>
+        </div>
+
+        <div class="container clearfix">
+            <div class="list_of_incomes_container">
+                <h2 class="income_title">Income</h2>
+                <div class="income_list">
+                    <!--List of Incomes-->
+                </div>
+            </div>
+            <div class="list_of_expenses_container">
+                <h2 class="expenses_title">Expenses</h2>
+                <div class="expenses_list">
+                    <!--List of Expenses-->
+                </div>
+            </div>
+        </div>
+
+    </div> <!--end .bottom-->
 
 </div>
 
-<label for="">
-    <select name="item_type" class="item_type">
-        <option value="income">Income</option>
-        <option value="expense">Expense</option>
-    </select>
-</label>
-
-<label>
-    <input type="text" name="" class="item_description" placeholder="">
-</label>
-
-<label>
-    <input type="number" name="" class="item_value" placeholder="">
-</label>
-
-<button class="add_button">Add</button>
 
 <script src="main.js"></script>
 </body>
