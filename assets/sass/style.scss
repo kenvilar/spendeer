@@ -1,6 +1,7 @@
 @import "variables";
 @import "base";
 @import "components";
+@import "buttons";
 * {
 	margin: 0;
 	padding: 0;
@@ -77,17 +78,6 @@ body {
 			text-align: center;
 			.item_description {
 				width: 400px;
-			}
-			.add_button {
-				font-size: 35px;
-				background: none;
-				border: none;
-				color: $color__button;
-				cursor: pointer;
-				display: inline-block;
-				vertical-align: middle;
-				line-height: 1.1;
-				margin-left: 10px;
 			}
 		}
 		.item_type {

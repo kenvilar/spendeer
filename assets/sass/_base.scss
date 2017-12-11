@@ -4,6 +4,9 @@ input, select, textarea {
 		border: 1px solid $color__green !important;
 	}
 }
+button {
+	outline: 0;
+}
 input {
 	border: 1px solid #e7e7e7;
 	background-color: #fff;
