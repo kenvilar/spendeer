@@ -23,6 +23,27 @@ var budgetController = (function () {
 		}
 	};
 
+	var calculateTotal = function (type) {
+		var all_items, sum;
+
+		sum = 0;
+
+		all_items = data.storeAll[type];
+
+		all_items.forEach(function (currValue, index, arr) {
+			sum = sum + currValue.value;
+		});
+
+		data.total[type] = sum;
+	};
+
+	var calculateNetWorth = function (income, expense) {
+		var net_worth;
+		net_worth = income - expense;
+
+		return net_worth;
+	};
+
 	return {
 		addItemPublic: function (type, description, value) {
 			var new_item, id, expOrIncArray;
@@ -46,26 +67,12 @@ var budgetController = (function () {
 			return new_item;
 		},
 		calculate: function () {
-			var allExpenses, allIncomes, netWorth, percentage, sum, all_items;
-			allExpenses = data.total.expense;
-			allIncomes = data.total.incomes;
+			var netWorth, percentage;
 
-			netWorth = percentage = sum = 0;
+			var total_income = calculateTotal('income');
+			var total_expense = calculateTotal('expense');
 
-			if (type === 'income') {
-				all_items = data.storeAll[type];
-
-				all_items.forEach(function (currValue, index, arr) {
-					sum = sum + currValue.value;
-				});
-			} else if (type === 'expense') {
-				all_items = data.storeAll[type];
-
-				all_items.forEach(function (currValue, index, arr) {
-					sum = sum + currValue.value;
-				});
-			}
-			data.total[type].push(sum);
+			calculateNetWorth(total_income, total_expense);
 		},
 		displayAllData: function () {
 			console.log(data);
