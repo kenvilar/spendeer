@@ -14,7 +14,7 @@ var budgetController = (function () {
 
 	var data = {
 		storeAll: {
-			expense: [], //[0, 'desc1', 20], []
+			expense: [],
 			income: []
 		},
 		total: {
@@ -49,7 +49,7 @@ var budgetController = (function () {
 	var calculatePercentage = function (total_expense, total_income) {
 		var percentage;
 		percentage = total_expense / total_income;
-		percentage = percentage * 100;
+		percentage = Math.round(percentage * 100);
 
 		return percentage;
 	};
@@ -200,6 +200,7 @@ var appController = (function (budgetCtrl, viewCtrl) {
 
 	var calc = function () {
 		// Calculate
+		budgetCtrl.calculatePublic();
 		// Display the result to the view
 	};
 
