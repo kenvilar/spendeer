@@ -20,7 +20,9 @@ var budgetController = (function () {
 		total: {
 			expenses: 0,
 			incomes: 0
-		}
+		},
+		budget: 0,
+		percentage: 0
 	};
 
 	var calculateTotal = function (type) {
@@ -42,6 +44,14 @@ var budgetController = (function () {
 		net_worth = income - expense;
 
 		return net_worth;
+	};
+
+	var calculatePercentage = function (total_expense, total_income) {
+		var percentage;
+		percentage = total_expense / total_income;
+		percentage = percentage * 100;
+
+		return percentage;
 	};
 
 	return {
@@ -66,13 +76,15 @@ var budgetController = (function () {
 
 			return new_item;
 		},
-		calculate: function () {
-			var netWorth, percentage;
+		calculatePublic: function () {
+			var total_income, total_expense;
 
-			var total_income = calculateTotal('income');
-			var total_expense = calculateTotal('expense');
+			total_income = calculateTotal('income');
+			total_expense = calculateTotal('expense');
 
-			calculateNetWorth(total_income, total_expense);
+			data.budget = calculateNetWorth(total_income, total_expense);
+
+			data.percentage = calculatePercentage(total_expense, total_income);
 		},
 		displayAllData: function () {
 			console.log(data);
