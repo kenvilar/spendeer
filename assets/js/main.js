@@ -230,7 +230,7 @@ var viewController = (function () {
 			// 2. )
 			newHtmlString = html.replace('%id%', obj.id);
 			newHtmlString = newHtmlString.replace('%description%', obj.description);
-			newHtmlString = newHtmlString.replace('%value%', obj.value.toFixed(2));
+			newHtmlString = newHtmlString.replace('%value%', numWithCommas(obj.value.toFixed(2)));
 
 			// 3. )
 			document.querySelector(el).insertAdjacentHTML('beforeend', newHtmlString);
