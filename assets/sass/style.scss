@@ -55,6 +55,11 @@
 		}
 		.spendeer_expenses {
 			background-color: $color__red;
+			.spendeer_expenses--percentage {
+				background-color: rgba(255, 255, 255, 0.2);
+				text-align: center;
+				border-radius: 3px;
+			}
 		}
 	}
 }
