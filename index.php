@@ -50,19 +50,19 @@
         <div class="add_wrapper">
             <div class="add_container">
                 <label for="item_type">
-                    <select id="item_type" name="item_type" class="item_type">
+                    <select id="item_type" name="item_type" class="item_type green">
                         <option value="income">Income</option>
                         <option value="expense">Expense</option>
                     </select>
                 </label>
                 <label for="item_description">
-                    <input type="text" name="" class="item_description" id="item_description"
+                    <input type="text" name="" class="item_description green" id="item_description"
                            placeholder="Add Description">
                 </label>
                 <label for="item_value">
-                    <input type="number" name="item_value" id="item_value" class="item_value" placeholder="Value">
+                    <input type="number" name="item_value" id="item_value" class="item_value green" placeholder="Value">
                 </label>
-                <button class="add_button"><i class="ion-ios-checkmark-outline"></i></button>
+                <button class="add_button green"><i class="ion-ios-checkmark-outline"></i></button>
             </div>
         </div>
 
