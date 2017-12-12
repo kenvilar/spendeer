@@ -269,7 +269,7 @@ var viewController = (function () {
 				if (percentage[index] > 0) {
 					curr_el.textContent = percentage[index] + '%';
 				} else {
-					curr_el.textContent = '';
+					curr_el.textContent = '---';
 				}
 			});
 
