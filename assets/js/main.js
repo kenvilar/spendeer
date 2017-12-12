@@ -175,6 +175,13 @@ var viewController = (function () {
 		};
 	};
 
+	var numWithCommas = function (num) {
+		var new_num = num.toString().split(".");
+		new_num[0] = new_num[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+		return new_num.join(".");
+	};
+
 	return {
 		getInputPublic: function () {
 			return getInput();
@@ -241,9 +248,9 @@ var viewController = (function () {
 			fieldsArr[0].focus();
 		},
 		displayBudget: function (obj) {
-			document.querySelector(DOMStr.netIncome).textContent = '+ ' + obj.budget.toFixed(2);
-			document.querySelector(DOMStr.total_income).textContent = '+ ' + obj.total_income.toFixed(2);
-			document.querySelector(DOMStr.total_expense).textContent = '- ' + obj.total_expense.toFixed(2);
+			document.querySelector(DOMStr.netIncome).textContent = '+ ' + numWithCommas(obj.budget.toFixed(2));
+			document.querySelector(DOMStr.total_income).textContent = '+ ' + numWithCommas(obj.total_income.toFixed(2));
+			document.querySelector(DOMStr.total_expense).textContent = '- ' + numWithCommas(obj.total_expense.toFixed(2));
 
 			if (obj.percentage > 0) {
 				document.querySelector(DOMStr.total_percentage).textContent = obj.percentage + '%';
