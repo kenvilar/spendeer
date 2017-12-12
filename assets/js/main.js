@@ -297,6 +297,24 @@ var viewController = (function () {
 
 			document.querySelector(DOMStr.month_and_year).textContent = monthNames[month] + ' ' + year;
 		},
+		changeTypeColor: function () {
+			var all_fields = document.querySelectorAll(
+				DOMStr.item_type + ', ' +
+				DOMStr.item_description + ', ' +
+				DOMStr.value + ', ' +
+				DOMStr.add_button
+			);
+
+			var my_own_foreach = function (list, callback) {
+				for (var i = 0; i < list.length; i++) {
+					callback(list[i], i);
+				}
+			};
+
+			my_own_foreach(all_fields, function (curr_el) {
+				curr_el.classList.toggle('red');
+			});
+		},
 		deleteItemView: function (dom_id) {
 			var element = document.getElementById(dom_id);
 			element.parentNode.removeChild(element);
@@ -322,6 +340,9 @@ var appController = (function (budgetCtrl, viewCtrl) {
 		});
 
 		document.querySelector(DOMStr.list_container).addEventListener('click', kv_delete_item);
+
+		// Change the color of all fields according to its type (Income or Expense)
+		document.querySelector(DOMStr.item_type).addEventListener('change', viewCtrl.changeTypeColor);
 	};
 
 	var calc = function () {
@@ -330,9 +351,8 @@ var appController = (function (budgetCtrl, viewCtrl) {
 
 		budgetCtrl.calculatePublic();
 
+		// Get data
 		data = budgetCtrl.getAllPublicData();
-		// Display the result to the view
-
 		return data;
 	};
 
@@ -361,6 +381,7 @@ var appController = (function (budgetCtrl, viewCtrl) {
 
 			// Calculate, display the result to the view
 			var all_data = calc();
+			// Display the result to the view
 			viewCtrl.displayBudget(all_data);
 
 			// Update the percentage
@@ -394,6 +415,7 @@ var appController = (function (budgetCtrl, viewCtrl) {
 
 			// 3.)
 			var all_data = calc();
+			// Display the result to the view
 			viewCtrl.displayBudget(all_data);
 
 			// 4.)
