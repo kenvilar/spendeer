@@ -235,7 +235,7 @@ var viewController = (function () {
 			/*for (var i = 0; i < fieldsArr.length; i++) {
 				fieldsArr[i].value = '';
 			}*/
-			fieldsArr.forEach(function (currentValue, index, array) {
+			fieldsArr.forEach(function (currentValue) {
 				currentValue.value = '';
 			});
 			fieldsArr[0].focus();
@@ -250,8 +250,6 @@ var viewController = (function () {
 			}
 		},
 		displayPercentage: function (percentage) {
-			//document.querySelector(DOMStr.each_expense_percentage).textContent = obj.percentage;
-			var new_node;
 			var node_list = document.querySelectorAll(DOMStr.each_expense_percentage);
 
 			node_list.forEach(function (t, index) {
