@@ -256,7 +256,7 @@ var viewController = (function () {
 				if (percentage[index] > 0) {
 					t.textContent = percentage[index] + '%';
 				} else {
-					t.textContent = percentage[index] + '%';
+					t.textContent = '';
 				}
 			});
 		},
