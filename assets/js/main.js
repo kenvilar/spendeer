@@ -252,13 +252,27 @@ var viewController = (function () {
 		displayPercentage: function (percentage) {
 			var node_list = document.querySelectorAll(DOMStr.each_expense_percentage);
 
-			node_list.forEach(function (t, index) {
+			var new_node = function (list, callback) {
+				for (var i = 0; i < list.length; i++) {
+					callback(list[i], i);
+				}
+			};
+
+			new_node(node_list, function (curr_el, index) {
+				if (percentage[index] > 0) {
+					curr_el.textContent = percentage[index] + '%';
+				} else {
+					curr_el.textContent = '';
+				}
+			});
+
+			/*node_list.forEach(function (t, index) {
 				if (percentage[index] > 0) {
 					t.textContent = percentage[index] + '%';
 				} else {
 					t.textContent = '';
 				}
-			});
+			});*/
 		},
 		deleteItemView: function (dom_id) {
 			var element = document.getElementById(dom_id);
