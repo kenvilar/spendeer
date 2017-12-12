@@ -144,7 +144,7 @@ var budgetController = (function () {
 			}
 		},
 		displayAllData: function () {
-			console.log(data);
+			return data;
 		}
 	};
 
@@ -331,7 +331,6 @@ var appController = (function (budgetCtrl, viewCtrl) {
 		budgetCtrl.calculatePublic();
 
 		data = budgetCtrl.getAllPublicData();
-		console.log(data);
 		// Display the result to the view
 
 		return data;
@@ -342,7 +341,6 @@ var appController = (function (budgetCtrl, viewCtrl) {
 
 		var percentage = budgetCtrl.getPercentagePublic();
 
-		console.log(percentage);
 		viewCtrl.displayPercentage(percentage);
 	};
 
@@ -350,7 +348,6 @@ var appController = (function (budgetCtrl, viewCtrl) {
 	var kv_add_item = function () {
 		// Get the input data
 		var user_input = viewCtrl.getInputPublic();
-		console.log(user_input);
 
 		if (!isNaN(user_input.item_value) && user_input.item_value > 0 && user_input.item_description !== '') {
 			// Add data to budgetController

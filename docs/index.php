@@ -1,6 +1,6 @@
-<!--
-Spendeer - A Very Simple Budget Application
--->
+<?php
+/* Spendeer - A Very Simple Budget Application */
+?>
 
 <!DOCTYPE html>
 <html lang="en">

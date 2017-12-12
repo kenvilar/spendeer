@@ -1,0 +1,11 @@
+.right {
+	float: right;
+}
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.red {
+	color: $color__red;
+}
