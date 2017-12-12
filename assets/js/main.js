@@ -283,12 +283,19 @@ var viewController = (function () {
 			});*/
 		},
 		displayMonthAndYear: function () {
-			var now, month, year;
+			var now, month, year, monthNames;
+
+			monthNames = [
+				"January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
+				"November", "December"
+			];
+
+
 			now = new Date();
 			month = now.getMonth();
 			year = now.getFullYear();
 
-			document.querySelector(DOMStr.month_and_year).textContent = month + ' ' + year;
+			document.querySelector(DOMStr.month_and_year).textContent = monthNames[month] + ' ' + year;
 		},
 		deleteItemView: function (dom_id) {
 			var element = document.getElementById(dom_id);
