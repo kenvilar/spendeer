@@ -163,7 +163,8 @@ var viewController = (function () {
 		total_income: '.spendeer_income--value',
 		total_expense: '.spendeer_expenses--value',
 		total_percentage: '.spendeer_expenses--percentage',
-		list_container: '.list_of_incomes_and_expenses'
+		list_container: '.list_of_incomes_and_expenses',
+		each_expense_percentage: '.display_percentage'
 	};
 
 	var getInput = function () {
@@ -248,6 +249,19 @@ var viewController = (function () {
 				document.querySelector(DOMStr.total_percentage).textContent = obj.percentage + '%';
 			}
 		},
+		displayPercentage: function (percentage) {
+			//document.querySelector(DOMStr.each_expense_percentage).textContent = obj.percentage;
+			var new_node;
+			var node_list = document.querySelectorAll(DOMStr.each_expense_percentage);
+
+			node_list.forEach(function (t, index) {
+				if (percentage[index] > 0) {
+					t.textContent = percentage[index] + '%';
+				} else {
+					t.textContent = percentage[index] + '%';
+				}
+			});
+		},
 		deleteItemView: function (dom_id) {
 			var element = document.getElementById(dom_id);
 			element.parentNode.removeChild(element);
@@ -294,6 +308,7 @@ var appController = (function (budgetCtrl, viewCtrl) {
 		var percentage = budgetCtrl.getPercentagePublic();
 
 		console.log(percentage);
+		viewCtrl.displayPercentage(percentage);
 	};
 
 
