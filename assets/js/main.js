@@ -223,7 +223,7 @@ var viewController = (function () {
 			// 2. )
 			newHtmlString = html.replace('%id%', obj.id);
 			newHtmlString = newHtmlString.replace('%description%', obj.description);
-			newHtmlString = newHtmlString.replace('%value%', obj.value);
+			newHtmlString = newHtmlString.replace('%value%', obj.value.toFixed(2));
 
 			// 3. )
 			document.querySelector(el).insertAdjacentHTML('beforeend', newHtmlString);
@@ -241,9 +241,9 @@ var viewController = (function () {
 			fieldsArr[0].focus();
 		},
 		displayBudget: function (obj) {
-			document.querySelector(DOMStr.netIncome).textContent = obj.budget;
-			document.querySelector(DOMStr.total_income).textContent = obj.total_income;
-			document.querySelector(DOMStr.total_expense).textContent = obj.total_expense;
+			document.querySelector(DOMStr.netIncome).textContent = '+ ' + obj.budget.toFixed(2);
+			document.querySelector(DOMStr.total_income).textContent = '+ ' + obj.total_income.toFixed(2);
+			document.querySelector(DOMStr.total_expense).textContent = '- ' + obj.total_expense.toFixed(2);
 
 			if (obj.percentage > 0) {
 				document.querySelector(DOMStr.total_percentage).textContent = obj.percentage + '%';
