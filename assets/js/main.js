@@ -301,7 +301,7 @@ var viewController = (function () {
 			var all_fields = document.querySelectorAll(
 				DOMStr.item_type + ', ' +
 				DOMStr.item_description + ', ' +
-				DOMStr.value + ', ' +
+				DOMStr.item_value + ', ' +
 				DOMStr.add_button
 			);
 
