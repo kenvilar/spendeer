@@ -164,7 +164,8 @@ var viewController = (function () {
 		total_expense: '.spendeer_expenses--value',
 		total_percentage: '.spendeer_expenses--percentage',
 		list_container: '.list_of_incomes_and_expenses',
-		each_expense_percentage: '.display_percentage'
+		each_expense_percentage: '.display_percentage',
+		month_and_year: '.spendeer_title--month-year'
 	};
 
 	var getInput = function () {
@@ -281,6 +282,14 @@ var viewController = (function () {
 				}
 			});*/
 		},
+		displayMonthAndYear: function () {
+			var now, month, year;
+			now = new Date();
+			month = now.getMonth();
+			year = now.getFullYear();
+
+			document.querySelector(DOMStr.month_and_year).textContent = month + ' ' + year;
+		},
 		deleteItemView: function (dom_id) {
 			var element = document.getElementById(dom_id);
 			element.parentNode.removeChild(element);
@@ -390,6 +399,7 @@ var appController = (function (budgetCtrl, viewCtrl) {
 
 	return {
 		initPublic: function () {
+			viewCtrl.displayMonthAndYear();
 			viewCtrl.displayBudget({
 				total_income: 0,
 				total_expense: 0,
