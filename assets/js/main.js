@@ -183,6 +183,12 @@ var viewController = (function () {
 		return new_num.join(".");
 	};
 
+	var my_own_foreach = function (list, callback) {
+		for (var i = 0; i < list.length; i++) {
+			callback(list[i], i);
+		}
+	};
+
 	return {
 		getInputPublic: function () {
 			return getInput();
@@ -260,13 +266,7 @@ var viewController = (function () {
 		displayPercentage: function (percentage) {
 			var node_list = document.querySelectorAll(DOMStr.each_expense_percentage);
 
-			var new_node = function (list, callback) {
-				for (var i = 0; i < list.length; i++) {
-					callback(list[i], i);
-				}
-			};
-
-			new_node(node_list, function (curr_el, index) {
+			my_own_foreach(node_list, function (curr_el, index) {
 				if (percentage[index] > 0) {
 					curr_el.textContent = percentage[index] + '%';
 				} else {
@@ -304,12 +304,6 @@ var viewController = (function () {
 				DOMStr.item_value + ', ' +
 				DOMStr.add_button
 			);
-
-			var my_own_foreach = function (list, callback) {
-				for (var i = 0; i < list.length; i++) {
-					callback(list[i], i);
-				}
-			};
 
 			my_own_foreach(all_fields, function (curr_el) {
 				curr_el.classList.toggle('red');
