@@ -22,7 +22,7 @@
     <div class="top">
         <div class="spendeer">
             <div class="spendeer_title">
-                Available Budget in <span class="spendeer_title--month">December 2017</span>:
+                Available Budget in <span class="spendeer_title--month-year">Ken Vilar's Spendeer Simple App :)</span>:
             </div>
 
             <div class="spendeer_value">- 0.00</div>
