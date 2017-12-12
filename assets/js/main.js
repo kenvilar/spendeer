@@ -258,6 +258,10 @@ var appController = (function (budgetCtrl, viewCtrl) {
 		return data;
 	};
 
+	var updatePercentage = function () {
+		//
+	};
+
 
 	var kv_add_item = function () {
 		// Get the input data
@@ -277,6 +281,9 @@ var appController = (function (budgetCtrl, viewCtrl) {
 			// Calculate, display the result to the view
 			var all_data = calc();
 			viewCtrl.displayBudget(all_data);
+
+			// Update the percentage
+			updatePercentage();
 		}
 	};
 
@@ -295,6 +302,7 @@ var appController = (function (budgetCtrl, viewCtrl) {
 			1. Delete the item with ID in budetCtrl
 			2. Delete the item with ID in viewCtrl
 			3. Update the data
+			4. Update the percentage
 			*/
 
 			// 1.)
@@ -306,6 +314,9 @@ var appController = (function (budgetCtrl, viewCtrl) {
 			// 3.)
 			var all_data = calc();
 			viewCtrl.displayBudget(all_data);
+
+			// 4.)
+			updatePercentage();
 		}
 	};
 
