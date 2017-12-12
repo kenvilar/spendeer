@@ -8,4 +8,7 @@
 }
 .red {
 	color: $color__red;
+	&:focus {
+		border: 1px solid $color__red;
+	}
 }
